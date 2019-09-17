@@ -56,3 +56,31 @@ func main() {
 	http.ListenAndServe(":7000", nil)
 }
 ```
+
+
+---
+
+### Button helper
+
+```go
+import "github.com/rubaxa/oauth-mailru.go/button"
+```
+
+#### CONST
+
+ - `button.PrimaryColor`
+ - `button.TextColor`
+ - `button.DefaultSize`
+
+#### HTML
+
+```go
+html := button.Render(mailru, button.Options{
+	Text:         "Continue with Mail.ru",
+	Target:       "_blank",
+	PrimaryColor: "#008079",
+	TextColor:    "#FFFFFF",
+	BorderRadius: "5px",
+	WithoutIcon:  true,
+})
+```
